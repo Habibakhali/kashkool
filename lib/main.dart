@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kashkool/Layout/home_screen.dart';
+import 'package:kashkool/Screens/login_screen.dart';
 import 'package:kashkool/Style/my_theme.dart';
 
 void main() {
@@ -14,12 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
         HomeScreen.routeName:(_)=>HomeScreen(),
+        LoginScreen.routeName:(_)=>LoginScreen(),
       },
       theme: MyTheme.lightMode,
       darkTheme: MyTheme.darkMode,
     );
+
   }
 }
