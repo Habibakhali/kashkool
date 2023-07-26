@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:kashkool/Layout/home_screen.dart';
 import 'package:kashkool/Screens/login_screen.dart';
 import 'package:kashkool/Style/my_theme.dart';
@@ -20,6 +22,17 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName:(_)=>HomeScreen(),
         LoginScreen.routeName:(_)=>LoginScreen(),
       },
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('ar'), // Spanish
+      ],
+      locale: Locale('ar'),
       theme: MyTheme.lightMode,
       darkTheme: MyTheme.darkMode,
     );
